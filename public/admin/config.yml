@@ -1,12 +1,12 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: static/img
+media_folder: src/img
 public_folder: /img
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "src/pages/blog" # The path to the folder where the documents are stored
+    folder: "src/content/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {
@@ -28,7 +28,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Publish Date", name: "date", widget: "datetime" }
   - name: "programs"
     label: "Programas" # Used in the UI, ie.: "New Post"
-    folder: "src/pages/programs" # The path to the folder where the documents are stored
+    folder: "src/content/programs" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {
@@ -41,8 +41,22 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Abbreviation", name: "abbreviation", widget: "text" }
       - { label: "Description", name: "description", widget: "markdown" }
   - name: "footer"
-    label: "Programas" # Used in the UI, ie.: "New Post"
-    folder: "src/pages/programs" # The path to the folder where the documents are stored
+    label: "Footer" # Used in the UI, ie.: "New Post"
+    folder: "src/content/programs" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "$/layouts/post.astro",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "URL", name: "url", widget: "text" }
+      - { label: "Logo", name: "description", widget: "image" }
+  - name: "homepage"
+    label: "Homepage" # Used in the UI, ie.: "New Post"
+    folder: "src/content/homepage" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {
