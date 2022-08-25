@@ -1,11 +1,11 @@
 backend:
-  name: git-gateway
-  branch: main
+  name: github
   repo: cristova-antunes/astro-test
-  base_url: "https://astro-test-ten.vercel.app/" # our site's base URL
+  branch: main
+  base_url: "https://astro-test-ten.vercel.app" # our site's base URL
   auth_endpoint: "api/auth" # used together with base_url for our custom endpoints (more on this later)
-media_folder: src/img
-public_folder: /img
+media_folder: "public/images" # the folder we want to upload new images to
+public_folder: "/images" # the folder our images should be fetched from
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
