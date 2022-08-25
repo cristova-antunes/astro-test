@@ -26,22 +26,8 @@ collections: # A list of collections the CMS should be able to edit
           widget: "string",
         }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-  - name: "programs"
-    label: "Programas" # Used in the UI, ie.: "New Post"
-    folder: "src/content/programs" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "$/layouts/BlogPost.astro",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Abbreviation", name: "abbreviation", widget: "text" }
-      - { label: "Description", name: "description", widget: "markdown" }
   - name: "configurations"
-    label: "configurations"
+    label: "Page settings"
     files:
       - name: "homepage"
         label: "Homepage" # Used in the UI, ie.: "New Post"
@@ -70,8 +56,6 @@ collections: # A list of collections the CMS should be able to edit
         create: true # Allow users to create new documents in this collection
         fields: # The fields each document in this collection have
           - { label: "Layout", name: "layout", widget: "hidden" }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "URL", name: "url", widget: "text" }
           - { label: "Logo", name: "description", widget: "image" }
   - name: "footer"
     label: "Footer" # Used in the UI, ie.: "New Post"
@@ -80,5 +64,19 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - { label: "Layout", name: "layout", widget: "hidden" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "URL", name: "url", widget: "text" }
+      - { label: "URL", name: "url", widget: "string" }
       - { label: "Logo", name: "description", widget: "image" }
+  - name: "programs"
+    label: "Programas" # Used in the UI, ie.: "New Post"
+    folder: "src/content/programs" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "$/layouts/BlogPost.astro",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Abbreviation", name: "abbreviation", widget: "text" }
+      - { label: "Description", name: "description", widget: "markdown" }
