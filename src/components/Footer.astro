@@ -1,9 +1,23 @@
 ---
-const today = new Date();
+// Also, you can import multiple files with Astro.glob
+const FooterData = await Astro.glob('../content/layout/footer/*.md');
+
+interface FooterData {
+	title: string,
+	url: string,
+	logo: 'string'
+}
+
+
 ---
 
 <footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+	&copy; YOUR NAME HERE. All rights reserved.
+	{FooterData.map((brand) => (
+		<li>
+			<p>{brand.frontmatter.title}</p>
+		</li>
+	))}
 </footer>
 <style>
 	footer {
