@@ -1,5 +1,28 @@
 ---
-const data = (await Astro.glob('../content/homepage.json'));
+import * as homepage from '../content/pages/homepage.md';
+import PageLayout from "../components/PageLayout.astro" ;
 
-console.log(data);
+interface Frontmatter {
+  title: string;
+  "intro-text": string;
+  "notes-text": string;
+  "authors-text": string;
+  "background-image": string;
+  video: string;
+}
+
+const data: Frontmatter = {
+    title: homepage.frontmatter.title,
+    "intro-text": homepage.frontmatter["intro-text"],
+    "notes-text": homepage.frontmatter["notes-text"],
+    "authors-text": homepage.frontmatter["authors-text"],
+    "background-image": homepage.frontmatter["background-image"],
+    video: homepage.frontmatter.video
+}
+
+
 ---
+
+<PageLayout>
+  Hellow
+</PageLayout>
