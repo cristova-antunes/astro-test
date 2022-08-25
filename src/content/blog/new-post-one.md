@@ -1,5 +1,5 @@
 ---
-layout: $/layouts/post.astro
+layout: ../../layouts/BlogPost.astro
 title: new post one
 description: new post one
 tags:
@@ -8,4 +8,5 @@ author: new post one
 authorTwitter: new post one
 date: 2022-08-18T18:19:35.018Z
 ---
+
 new post one

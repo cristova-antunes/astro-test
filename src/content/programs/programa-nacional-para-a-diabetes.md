@@ -1,5 +1,5 @@
 ---
-layout: $/layouts/post.astro
+layout: ../../layouts/BlogPost.astro
 title: Programa Nacional para a Diabetes
 abbreviation: PND
 description: >-
