@@ -42,7 +42,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Description", name: "description", widget: "markdown" }
   - name: "homepage"
     label: "Homepage" # Used in the UI, ie.: "New Post"
-    folder: "src/content/homepage" # The path to the folder where the documents are stored
+    file: "src/content/homepage" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {
@@ -63,6 +63,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: "Layout", name: "layout", widget: "hidden" }
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "URL", name: "url", widget: "text" }
       - { label: "Logo", name: "description", widget: "image" }
   - name: "footer"
@@ -71,5 +72,6 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: "Layout", name: "layout", widget: "hidden" }
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "URL", name: "url", widget: "text" }
       - { label: "Logo", name: "description", widget: "image" }
