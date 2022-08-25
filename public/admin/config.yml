@@ -40,38 +40,45 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Abbreviation", name: "abbreviation", widget: "text" }
       - { label: "Description", name: "description", widget: "markdown" }
-  - name: "homepage"
-    label: "Homepage" # Used in the UI, ie.: "New Post"
-    file: "src/content/homepage" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "$/layouts/BlogPost.astro",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "intro-text", name: "intro-text", widget: "text" }
-      - { label: "notes-text", name: "notes-text", widget: "text" }
-      - { label: "authors-text", name: "authors-text", widget: "markdown" }
-      - { label: "background-image", name: "background-image", widget: "image" }
-      - { label: "video", name: "video", widget: "file" }
-  - name: "header"
-    label: "Header" # Used in the UI, ie.: "New Post"
-    folder: "src/content/header" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - { label: "Layout", name: "layout", widget: "hidden" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "URL", name: "url", widget: "text" }
-      - { label: "Logo", name: "description", widget: "image" }
-  - name: "footer"
-    label: "Footer" # Used in the UI, ie.: "New Post"
-    folder: "src/content/footer" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - { label: "Layout", name: "layout", widget: "hidden" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "URL", name: "url", widget: "text" }
-      - { label: "Logo", name: "description", widget: "image" }
+  - name: "configurations"
+    label: "configurations"
+    files:
+      - name: "homepage"
+        label: "Homepage" # Used in the UI, ie.: "New Post"
+        file: "src/content/homepage.yml" # The path to the folder where the documents are stored
+        create: true # Allow users to create new documents in this collection
+        fields: # The fields each document in this collection have
+          - {
+              label: "Layout",
+              name: "layout",
+              widget: "hidden",
+              default: "$/layouts/BlogPost.astro",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "intro-text", name: "intro-text", widget: "text" }
+          - { label: "notes-text", name: "notes-text", widget: "text" }
+          - { label: "authors-text", name: "authors-text", widget: "markdown" }
+          - {
+              label: "background-image",
+              name: "background-image",
+              widget: "image",
+            }
+          - { label: "video", name: "video", widget: "file" }
+      - name: "header"
+        label: "Header" # Used in the UI, ie.: "New Post"
+        folder: "src/content/header" # The path to the folder where the documents are stored
+        create: true # Allow users to create new documents in this collection
+        fields: # The fields each document in this collection have
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "URL", name: "url", widget: "text" }
+          - { label: "Logo", name: "description", widget: "image" }
+      - name: "footer"
+        label: "Footer" # Used in the UI, ie.: "New Post"
+        folder: "src/content/footer" # The path to the folder where the documents are stored
+        create: true # Allow users to create new documents in this collection
+        fields: # The fields each document in this collection have
+          - { label: "Layout", name: "layout", widget: "hidden" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "URL", name: "url", widget: "text" }
+          - { label: "Logo", name: "description", widget: "image" }
