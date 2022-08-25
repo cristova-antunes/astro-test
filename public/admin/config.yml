@@ -66,19 +66,19 @@ collections: # A list of collections the CMS should be able to edit
           - { label: "video", name: "video", widget: "file" }
       - name: "header"
         label: "Header" # Used in the UI, ie.: "New Post"
-        folder: "src/content/header" # The path to the folder where the documents are stored
+        file: "src/content/header.yml" # The path to the folder where the documents are stored
         create: true # Allow users to create new documents in this collection
         fields: # The fields each document in this collection have
           - { label: "Layout", name: "layout", widget: "hidden" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "URL", name: "url", widget: "text" }
           - { label: "Logo", name: "description", widget: "image" }
-      - name: "footer"
-        label: "Footer" # Used in the UI, ie.: "New Post"
-        folder: "src/content/footer" # The path to the folder where the documents are stored
-        create: true # Allow users to create new documents in this collection
-        fields: # The fields each document in this collection have
-          - { label: "Layout", name: "layout", widget: "hidden" }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "URL", name: "url", widget: "text" }
-          - { label: "Logo", name: "description", widget: "image" }
+  - name: "footer"
+    label: "Footer" # Used in the UI, ie.: "New Post"
+    folder: "src/content/footer" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: "Layout", name: "layout", widget: "hidden" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "URL", name: "url", widget: "text" }
+      - { label: "Logo", name: "description", widget: "image" }
