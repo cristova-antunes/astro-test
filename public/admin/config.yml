@@ -13,7 +13,7 @@ collections: # A list of collections the CMS should be able to edit
           label: "Layout",
           name: "layout",
           widget: "hidden",
-          default: "$/layouts/post.astro",
+          default: "$/layouts/BlogPost.astro",
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
@@ -35,7 +35,7 @@ collections: # A list of collections the CMS should be able to edit
           label: "Layout",
           name: "layout",
           widget: "hidden",
-          default: "$/layouts/post.astro",
+          default: "$/layouts/BlogPost.astro",
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Abbreviation", name: "abbreviation", widget: "text" }
@@ -49,7 +49,7 @@ collections: # A list of collections the CMS should be able to edit
           label: "Layout",
           name: "layout",
           widget: "hidden",
-          default: "$/layouts/post.astro",
+          default: "$/layouts/BlogPost.astro",
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "URL", name: "url", widget: "text" }
@@ -63,7 +63,7 @@ collections: # A list of collections the CMS should be able to edit
           label: "Layout",
           name: "layout",
           widget: "hidden",
-          default: "$/layouts/post.astro",
+          default: "$/layouts/BlogPost.astro",
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "URL", name: "url", widget: "text" }
