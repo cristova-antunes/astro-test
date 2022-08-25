@@ -31,7 +31,7 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - name: "homepage"
         label: "Homepage" # Used in the UI, ie.: "New Post"
-        file: "src/content/homepage.json" # The path to the folder where the documents are stored
+        file: "src/content/pages/homepage.md" # The path to the folder where the documents are stored
         create: true # Allow users to create new documents in this collection
         fields: # The fields each document in this collection have
           - {
